@@ -1,0 +1,20 @@
+{
+  "name": "ghost-steps",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ghost Steps: demo system for detecting likely vehicle-generated step counts",
+  "scripts": {
+    "build": "tsc -p ghost-steps-mcp/tsconfig.json",
+    "start": "node ghost-steps-mcp/dist/index.js",
+    "dashboard": "node scripts/serve-dashboard.js",
+    "test": "npm run build && node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
